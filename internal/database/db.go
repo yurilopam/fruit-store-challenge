@@ -19,5 +19,5 @@ func Connect() {
 	if err != nil {
 		log.Panic(err)
 	}
-	DB.AutoMigrate(&models.Fruit{})
+	DB.AutoMigrate(&models.Fruit{}, &models.User{})
 }

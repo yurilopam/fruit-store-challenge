@@ -16,6 +16,12 @@ func HandleRequests() {
 	r.PUT("/fruits/:id", controllers.UpdateFruit)
 	r.DELETE("/fruits/:id", controllers.DeleteFruit)
 
+	r.GET("/users", controllers.GetUsers)
+	r.GET("/users/:id", controllers.GetUser)
+	r.POST("/users", controllers.CreateUser)
+	r.PUT("/users/:id", controllers.UpdateUser)
+	r.DELETE("/users/:id", controllers.DeleteUser)
+
 	if err := r.Run(); err != nil {
 		log.Fatal(err)
 	}
